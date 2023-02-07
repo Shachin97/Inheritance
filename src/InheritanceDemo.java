@@ -15,21 +15,22 @@ public class InheritanceDemo {
         //creating salary workers and adding them to workers arraylist
         SalaryWorker salaryWorker1 = new SalaryWorker("12345", "Mike", "Johnson", "Mr", 1990, 50000);
         workers.add(salaryWorker1);
-        SalaryWorker salaryWorker2 = new SalaryWorker("12342", "Macck", "Johnson", "Mr", 1995, 60000);
+        SalaryWorker salaryWorker2 = new SalaryWorker("12342", "Mack", "Johnson", "Mr", 1995, 60000);
         workers.add(salaryWorker2);
         SalaryWorker salaryWorker3 = new SalaryWorker("12443", "Alex", "Johnson", "Mr", 1999, 75000);
         workers.add(salaryWorker3);
 
-        int[] hoursWorked = {40, 50, 40};
+        int[] workingHours = {40, 50, 40};
         DecimalFormat decimalFormat = new DecimalFormat("#.00");
         System.out.println("Week\tWorker\t    WeeklyPay");
         for (int i = 0; i < 3; i++) {
             System.out.println();
             for (Worker worker : workers) {
-                double weeklyPAY;
-                double weeklyPay = worker.calculateWeeklyPay(hoursWorked[i]);
+
+                double weeklyPay = worker.calculateWeeklyPay(workingHours[i]);
                 System.out.println((i + 1) + "\t"+"\t"
                         + worker.getFirstName() +"\t"+"\t$" +decimalFormat.format(weeklyPay));
+
             }
 
 

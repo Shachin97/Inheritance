@@ -11,7 +11,8 @@ public class SalaryWorker extends Worker
 
     @Override
     public double calculateWeeklyPay(double hoursWorked) {
-        return (this.annualSalary/52)*(hoursWorked/40);
+       double weekPay = annualSalary /52;
+        return weekPay;
 
     }
 

@@ -1,32 +1,39 @@
 public class Worker extends Person {
 
-    double hourlyPayRate;
-    double regularPay;
-    double overtimePay; ;
-    double totalPay;
-    String Display;
-
+    double hourlyPayRate =0;
     public double calculateWeeklyPay(double hoursWorked)
     {
 
+        double regularPay =0;
+        double overtimePay=0;
+        double totalPay =0 ;
+        String Display ="";
+
         if( hoursWorked <= 40)
         {
-            regularPay = 40 * hourlyPayRate;
+            regularPay = hoursWorked * hourlyPayRate;
         }
         else {
             overtimePay = (hoursWorked - 40) * (hourlyPayRate * 1.5);
-
+            regularPay =  hourlyPayRate * 40;
         }
         totalPay = overtimePay + regularPay;
-       return totalPay;
+        return totalPay;
     }
     public String displayWeeklyPay(double hoursWorked)
+
     {
+
+        double regularPay =0;
+        double overtimePay=0; ;
+        double totalPay=0;
+        String Display ="";
+
         if( hoursWorked > 40)
         {
             overtimePay = (hoursWorked - 40) * (hourlyPayRate * 1.5);
         }
-        regularPay = 40 * hoursWorked;
+        regularPay = 40 * hourlyPayRate;
         totalPay = overtimePay + regularPay;
         Display = String.format("Regular Hours : %.2f\nRegular Pay: $%.2f\nOvertime Hours: %.2f\nTotal Pay: %.2f", hoursWorked
                 , regularPay,overtimePay,totalPay);
@@ -40,4 +47,3 @@ public class Worker extends Person {
 
 
 }
-
