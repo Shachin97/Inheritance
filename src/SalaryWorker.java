@@ -25,4 +25,11 @@ public class SalaryWorker extends Worker
         return display;
     }
 
+    public double getAnnualSalary() {
+        return annualSalary;
+    }
+
+    public void setAnnualSalary(double annualSalary) {
+        this.annualSalary = annualSalary;
+    }
 }

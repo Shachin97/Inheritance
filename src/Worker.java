@@ -45,5 +45,12 @@ public class Worker extends Person {
         this.hourlyPayRate = hourlyPayRate;
     }
 
+    public double getHourlyPayRate() {
+        return hourlyPayRate;
+    }
+
+    public void setHourlyPayRate(double hourlyPayRate) {
+        this.hourlyPayRate = hourlyPayRate;
+    }
 
 }
